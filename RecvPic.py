@@ -14,7 +14,7 @@ def imageType(filename):
     except IOError:
         return False
 
-hostname= os.environ['RABBIT_HOST'] if 'RABBIT_HOST' in os.environ else 'rabbitmq-server.local'
+hostname= os.environ['RABBIT_HOST'] if 'RABBIT_HOST' in os.environ else '172.31.6.6'
 
 redisByChecksum = redis.Redis(host='172.31.5.5', db=1)
 redisByName = redis.Redis(host='172.31.5.5', db=2)

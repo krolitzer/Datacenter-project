@@ -8,7 +8,7 @@ import hashlib
 import redis
 
 hostname= os.environ['RABBIT_HOST'] \
-          if 'RABBIT_HOST' in os.environ else 'rabbitmq-server.local'
+          if 'RABBIT_HOST' in os.environ else '172.31.6.6'
 connection = pika.BlockingConnection(pika.ConnectionParameters(host=hostname))
 channel = connection.channel()
 

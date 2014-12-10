@@ -4,7 +4,7 @@ import PIL
 import pika
 import md5
 
-hostname= os.environ['RABBIT_HOST'] if 'RABBIT_HOST' in os.environ else 'rabbitmq-server.local'
+hostname= os.environ['RABBIT_HOST'] if 'RABBIT_HOST' in os.environ else '172.31.6.6'
 
 if len(sys.argv) < 2:
     print "Error! No image file specified!"
