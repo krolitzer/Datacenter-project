@@ -18,10 +18,10 @@ app = Flask(__name__)
 UPLOAD_FOLDER = '/tmp'
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
-redisByChecksum = redis.Redis(host='redis-server.local', db=1)
-redisByName = redis.Redis(host='redis-server.local', db=2)
-redisMD5ByLicense = redis.Redis(host='redis-server.local', db=3)
-redisNameByLicense = redis.Redis(host='redis-server.local', db=4)
+redisByChecksum = redis.Redis(host='172.31.5.5', db=1)
+redisByName = redis.Redis(host='172.31.5.5', db=2)
+redisMD5ByLicense = redis.Redis(host='172.31.5.5', db=3)
+redisNameByLicense = redis.Redis(host='172.31.5.5', db=4)
 
 def allowed_file(filename):
     return '.' in filename and \

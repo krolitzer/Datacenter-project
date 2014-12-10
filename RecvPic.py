@@ -16,10 +16,10 @@ def imageType(filename):
 
 hostname= os.environ['RABBIT_HOST'] if 'RABBIT_HOST' in os.environ else 'rabbitmq-server.local'
 
-redisByChecksum = redis.Redis(host='redis-server.local', db=1)
-redisByName = redis.Redis(host='redis-server.local', db=2)
-redisMD5ByLicense = redis.Redis(host='redis-server.local', db=3)
-redisNameByLicense = redis.Redis(host='redis-server.local', db=4)
+redisByChecksum = redis.Redis(host='172.31.5.5', db=1)
+redisByName = redis.Redis(host='172.31.5.5', db=2)
+redisMD5ByLicense = redis.Redis(host='172.31.5.5', db=3)
+redisNameByLicense = redis.Redis(host='172.31.5.5', db=4)
 
 ###
 # Modify the basic worker outline you've been provided to take license tags returned by 
