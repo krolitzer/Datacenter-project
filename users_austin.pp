@@ -11,6 +11,24 @@ group { "austin":
         gid => 1117,
 }
 
+# Ensure the home directory exists with the right permissions
+file { "/home/austin":
+	ensure => directory,
+	owner => austin,
+	group => austin,
+	mode => '0755',
+	require => [ User[austin], Group[austin] ],
+}
+ 
+# Ensure the .ssh directory exists with the right permissions
+file { "/home/austin/.ssh":
+	ensure => directory,
+	owner => austin,
+	group => austin,
+	mode => '0700',
+	require => File["/home/austin"],
+} 
+
 ssh_authorized_key { "austin":
         ensure => present,
         name => "austin",
