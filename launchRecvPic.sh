@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python /home/chris/data/RecvPic.py
+python -u /home/chris/data/RecvPic.py >> /var/log/recvpic.log &
